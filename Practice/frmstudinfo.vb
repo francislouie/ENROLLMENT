@@ -16,6 +16,10 @@
             Me.btnadd.Text = "SAVE"
             Me.btnedit.Text = "BACK"
 
+            If txtcstudid.Text = "" Then
+                txtcstudid.Text = "S0001"
+            End If
+
             txtcfname.Enabled = True
             txtclname.Enabled = True
             txtcmname.Enabled = True
