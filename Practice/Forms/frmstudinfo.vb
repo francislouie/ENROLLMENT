@@ -103,5 +103,7 @@
         clearfields()
     End Sub
 
-
+    Private Sub Label12_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles Label12.Click
+        frmparents.Show()
+    End Sub
 End Class

@@ -105,6 +105,12 @@
       <DependentUpon>frmmain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
+    <Compile Include="Forms\frmparents.Designer.vb">
+      <DependentUpon>frmparents.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmparents.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="Forms\frmstudinfo.Designer.vb">
       <DependentUpon>frmstudinfo.vb</DependentUpon>
     </Compile>
@@ -140,6 +146,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmmain.resx">
       <DependentUpon>frmmain.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmparents.resx">
+      <DependentUpon>frmparents.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmstudinfo.resx">
       <DependentUpon>frmstudinfo.vb</DependentUpon>
