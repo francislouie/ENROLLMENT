@@ -148,6 +148,7 @@ Module enrollmentquery
                 frmstudinfo.txtclname.Text = exec_dreader.GetString(3)
                 frmstudinfo.txtcnickname.Text = exec_dreader.GetString(4)
             Loop
+
             exec_conn.Close()
 
             exec_conn.Open()
@@ -159,9 +160,7 @@ Module enrollmentquery
 
             Do While exec_dreader.Read()
 
-                ' MsgBox(exec_dreader.GetString(1))
                 frmstudinfo.txdtpbirthday.Text = exec_dreader.GetString(1) '.ToString("dd/MM/yyyy")
-                ' MsgBox(exec_dreader.GetString(1))
                 frmstudinfo.txtbirthplace.Text = exec_dreader.GetString(2)
                 frmstudinfo.txcbgender.Text = exec_dreader.GetString(3)
                 frmstudinfo.txtcitizen.Text = exec_dreader.GetString(4)
@@ -169,7 +168,7 @@ Module enrollmentquery
                 frmstudinfo.txtweight.Text = exec_dreader.GetString(6)
                 frmstudinfo.txtreligion.Text = exec_dreader.GetString(7)
             Loop
-
+            exec_conn.Close()
         Catch ex As Exception
             exec_conn.Close()
             ' MsgBox(ex.Message)

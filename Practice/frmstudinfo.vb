@@ -15,7 +15,7 @@
     Private Sub btnadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnadd.Click
         If Me.btnadd.Text = "ADD" Then
             Me.btnadd.Text = "SAVE"
-            Me.btnedit.Text = "REVERT"
+            Me.btnedit.Text = "BACK"
 
             txtcfname.Enabled = True
             txtclname.Enabled = True
@@ -48,7 +48,6 @@
             clearfields()
             querydatagrid()
             gridstudinfo()
-            ' test 
         End If
 
         If Me.btnadd.Text = "UPDATE" Then
@@ -72,27 +71,13 @@
     Private Sub btnedit_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnedit.Click
         If Me.btnedit.Text = "EDIT" Then
             Me.btnadd.Text = "UPDATE"
-            Me.btnedit.Text = "REVERT"
+            Me.btnedit.Text = "BACK"
             txtcfname.Enabled = True
             txtclname.Enabled = True
             txtcmname.Enabled = True
             txtcnickname.Enabled = True
 
-            'ElseIf Me.btnadd.Text = "UPDATE" Then
-            '   Me.btnedit.Text = "EDIT"
-            '       ElseIf Me.btnadd.Text = "UPDATE" Then
-            '          Me.btnedit.Text = "EDIT"
-            '         txtcfname.Enabled = False
-            '          txtclname.Enabled = False
-            '        txtcmname.Enabled = False
-            '        txtcnickname.Enabled = False
-            '       queryupdate()
-            '       clearfields()
-            '      querydatagrid()
-       
-            '   End If
-
-        ElseIf Me.btnedit.Text = "REVERT" Then
+        ElseIf Me.btnedit.Text = "BACK" Then
             Me.btnedit.Text = "EDIT"
             Me.btnadd.Text = "ADD"
             txtcfname.Enabled = False
