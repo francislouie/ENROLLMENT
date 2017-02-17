@@ -159,7 +159,7 @@ Module enrollmentquery
 
             Do While exec_dreader.Read()
 
-                '' MsgBox(exec_dreader.GetString(1))
+                ' MsgBox(exec_dreader.GetString(1))
                 frmstudinfo.txdtpbirthday.Text = exec_dreader.GetString(1) '.ToString("dd/MM/yyyy")
                 ' MsgBox(exec_dreader.GetString(1))
                 frmstudinfo.txtbirthplace.Text = exec_dreader.GetString(2)
