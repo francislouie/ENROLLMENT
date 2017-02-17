@@ -112,6 +112,12 @@
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Connection\MysqlConnector.vb" />
+    <Compile Include="Forms\frmsubject.Designer.vb">
+      <DependentUpon>frmsubject.vb</DependentUpon>
+    </Compile>
+    <Compile Include="Forms\frmsubject.vb">
+      <SubType>Form</SubType>
+    </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -137,6 +143,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Forms\frmstudinfo.resx">
       <DependentUpon>frmstudinfo.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Forms\frmsubject.resx">
+      <DependentUpon>frmsubject.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
       <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
