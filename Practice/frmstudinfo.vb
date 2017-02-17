@@ -8,7 +8,6 @@
         gridstudinfo()
         querydatagrid()
 
-        createcombostudinfo()
     End Sub
 
     Private Sub btnadd_Click(ByVal sender As System.Object, ByVal e As System.EventArgs) Handles btnadd.Click
@@ -16,6 +15,8 @@
             Me.btnadd.Text = "SAVE"
             Me.btnedit.Text = "BACK"
 
+
+            createcombostudinfo()
             txtcfname.Enabled = True
             txtclname.Enabled = True
             txtcmname.Enabled = True
@@ -36,6 +37,7 @@
             txtcnickname.Clear()
             txtcmname.Clear()
 
+
         ElseIf Me.btnadd.Text = "SAVE" Then
             Me.btnadd.Text = "ADD"
             Me.btnedit.Text = "EDIT"
@@ -45,8 +47,9 @@
             txtcmname.Enabled = False
             txtcnickname.Enabled = False
             clearfields()
-            querydatagrid()
+
             gridstudinfo()
+            querydatagrid()
         End If
 
         If Me.btnadd.Text = "UPDATE" Then
@@ -99,5 +102,6 @@
         Next
         clearfields()
     End Sub
+
 
 End Class

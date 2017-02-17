@@ -139,7 +139,8 @@ Module enrollmentquery
     End Sub
 
     Public Sub querydatagrid()
-        Dim id As String = frmstudinfo.datagridstud.SelectedRows(0).Cells(0).Value
+
+        Dim id = frmstudinfo.datagridstud.SelectedRows(0).Cells(0).Value
         Try
             exec_conn.Open()
             query = ("SELECT * FROM studinfo where cstudno = '" & id & "'")
@@ -181,7 +182,6 @@ Module enrollmentquery
             ' MsgBox(ex.Message)
 
         End Try
-
     End Sub
 
     Public Sub queryadd()

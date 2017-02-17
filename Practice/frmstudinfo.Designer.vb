@@ -279,7 +279,6 @@ Partial Class frmstudinfo
         'Label10
         '
         Me.Label10.AutoSize = True
-        Me.Label10.Enabled = False
         Me.Label10.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label10.Location = New System.Drawing.Point(331, 246)
         Me.Label10.Name = "Label10"
@@ -290,7 +289,6 @@ Partial Class frmstudinfo
         'Label11
         '
         Me.Label11.AutoSize = True
-        Me.Label11.Enabled = False
         Me.Label11.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label11.Location = New System.Drawing.Point(331, 277)
         Me.Label11.Name = "Label11"
@@ -301,7 +299,6 @@ Partial Class frmstudinfo
         'Label13
         '
         Me.Label13.AutoSize = True
-        Me.Label13.Enabled = False
         Me.Label13.Font = New System.Drawing.Font("Microsoft Sans Serif", 12.0!, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, CType(0, Byte))
         Me.Label13.Location = New System.Drawing.Point(331, 217)
         Me.Label13.Name = "Label13"
