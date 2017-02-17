@@ -158,7 +158,7 @@ Module enrollmentquery
             If Not exec_dreader.HasRows Then Exit Sub
 
             Do While exec_dreader.Read()
-                'exec_dreader.GetString(0)
+
                 ' MsgBox(exec_dreader.GetString(1))
                 frmstudinfo.txdtpbirthday.Text = exec_dreader.GetString(1) '.ToString("dd/MM/yyyy")
                 ' MsgBox(exec_dreader.GetString(1))
