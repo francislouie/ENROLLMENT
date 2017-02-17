@@ -61,24 +61,31 @@ Module enrollmentquery
     End Sub
 
     Public Sub autoid()
-        Try
-            exec_conn.Open()
-            query = ("select MAX(RIGHT(cstudno,4)) from studinfo")
-            exec_command = New MySqlCommand(query, exec_conn)
-            exec_dreader = exec_command.ExecuteReader
-            If exec_dreader.Read() Then
-                Dim number As Integer = exec_dreader.Item(0)
-                number = number + 1
-                Dim emplang As String = "S"
-                Dim append As String = emplang + number.ToString().PadLeft(4, "000")
-                frmstudinfo.txtcstudid.Text = append
-            Else
-                Exit Sub
-            End If
-            exec_conn.Close()
-        Catch ex As Exception
-            MessageBox.Show(ex.Message)
-        End Try
+
+        If frmstudinfo.txtcstudid.Text = "" Then
+            frmstudinfo.txtcstudid.Text = "S0001"
+        Else
+
+            Try
+                exec_conn.Open()
+                query = ("select MAX(RIGHT(cstudno,4)) from studinfo")
+                exec_command = New MySqlCommand(query, exec_conn)
+                exec_dreader = exec_command.ExecuteReader
+                If exec_dreader.Read() Then
+                    Dim number As Integer = exec_dreader.Item(0)
+                    number = number + 1
+                    Dim emplang As String = "S"
+                    Dim append As String = emplang + number.ToString().PadLeft(4, "000")
+                    frmstudinfo.txtcstudid.Text = append
+                Else
+                    Exit Sub
+                End If
+                exec_conn.Close()
+            Catch ex As Exception
+                MessageBox.Show(ex.Message)
+            End Try
+        End If
+
     End Sub
 
     Public Sub createcolumnstudinfo()
