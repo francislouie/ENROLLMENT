@@ -2,8 +2,7 @@
 SQLyog Ultimate v9.63 
 MySQL - 5.5.5-10.1.19-MariaDB : Database - enrollment
 *********************************************************************
-*/
-
+*/
 /*!40101 SET NAMES utf8 */;
 
 /*!40101 SET SQL_MODE=''*/;
