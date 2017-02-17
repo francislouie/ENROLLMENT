@@ -8,9 +8,9 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{6E4A513C-C7C2-404B-90E8-6891C2DFA3D7}</ProjectGuid>
     <OutputType>WinExe</OutputType>
-    <StartupObject>Practice.My.MyApplication</StartupObject>
-    <RootNamespace>Practice</RootNamespace>
-    <AssemblyName>Practice</AssemblyName>
+    <StartupObject>Enrollment.My.MyApplication</StartupObject>
+    <RootNamespace>Enrollment</RootNamespace>
+    <AssemblyName>Enrollment</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <MyType>WindowsForms</MyType>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
@@ -38,7 +38,7 @@
     <DefineDebug>true</DefineDebug>
     <DefineTrace>true</DefineTrace>
     <OutputPath>bin\Debug\</OutputPath>
-    <DocumentationFile>Practice.xml</DocumentationFile>
+    <DocumentationFile>Enrollment.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
@@ -48,7 +48,7 @@
     <DefineTrace>true</DefineTrace>
     <Optimize>true</Optimize>
     <OutputPath>bin\Release\</OutputPath>
-    <DocumentationFile>Practice.xml</DocumentationFile>
+    <DocumentationFile>Enrollment.xml</DocumentationFile>
     <NoWarn>42016,41999,42017,42018,42019,42032,42036,42020,42021,42022</NoWarn>
   </PropertyGroup>
   <PropertyGroup>
@@ -92,26 +92,26 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="enrollmentquery.vb" />
-    <Compile Include="frmlogin.Designer.vb">
+    <Compile Include="Forms\frmlogin.Designer.vb">
       <DependentUpon>frmlogin.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmlogin.vb">
+    <Compile Include="Forms\frmlogin.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmmain.vb">
+    <Compile Include="Forms\frmmain.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmmain.Designer.vb">
+    <Compile Include="Forms\frmmain.Designer.vb">
       <DependentUpon>frmmain.vb</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="frmstudinfo.Designer.vb">
+    <Compile Include="Forms\frmstudinfo.Designer.vb">
       <DependentUpon>frmstudinfo.vb</DependentUpon>
     </Compile>
-    <Compile Include="frmstudinfo.vb">
+    <Compile Include="Forms\frmstudinfo.vb">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MysqlConnector.vb" />
+    <Compile Include="Connection\MysqlConnector.vb" />
     <Compile Include="My Project\AssemblyInfo.vb" />
     <Compile Include="My Project\Application.Designer.vb">
       <AutoGen>True</AutoGen>
@@ -129,13 +129,13 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="frmlogin.resx">
+    <EmbeddedResource Include="Forms\frmlogin.resx">
       <DependentUpon>frmlogin.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmmain.resx">
+    <EmbeddedResource Include="Forms\frmmain.resx">
       <DependentUpon>frmmain.vb</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="frmstudinfo.resx">
+    <EmbeddedResource Include="Forms\frmstudinfo.resx">
       <DependentUpon>frmstudinfo.vb</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="My Project\Resources.resx">
