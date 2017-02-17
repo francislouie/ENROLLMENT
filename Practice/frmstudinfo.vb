@@ -48,7 +48,7 @@
             clearfields()
             querydatagrid()
             gridstudinfo()
-
+            ' test 
         End If
 
         If Me.btnadd.Text = "UPDATE" Then
