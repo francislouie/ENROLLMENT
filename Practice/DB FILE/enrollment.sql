@@ -2,7 +2,8 @@
 SQLyog Ultimate v9.63 
 MySQL - 5.5.5-10.1.19-MariaDB : Database - enrollment
 *********************************************************************
-*/
+*/
+
 /*!40101 SET NAMES utf8 */;
 
 /*!40101 SET SQL_MODE=''*/;
@@ -20,32 +21,38 @@ USE `enrollment`;
 DROP TABLE IF EXISTS `studinfo`;
 
 CREATE TABLE `studinfo` (
-  `cstudno` CHAR(5) NOT NULL DEFAULT '',
-  `cfname` VARCHAR(50) NOT NULL DEFAULT '',
-  `cmname` VARCHAR(50) NOT NULL DEFAULT '',
-  `clname` VARCHAR(50) NOT NULL DEFAULT '',
-  `cnickname` VARCHAR(50) NOT NULL DEFAULT '',
-  `clocked` DECIMAL(1,0) NOT NULL,
+  `cstudno` char(5) NOT NULL DEFAULT '',
+  `cfname` varchar(50) NOT NULL DEFAULT '',
+  `cmname` varchar(50) NOT NULL DEFAULT '',
+  `clname` varchar(50) NOT NULL DEFAULT '',
+  `cnickname` varchar(50) NOT NULL DEFAULT '',
+  `clocked` decimal(1,0) NOT NULL,
   PRIMARY KEY (`cstudno`)
-) ENGINE=INNODB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `studinfo` */
+
+insert  into `studinfo`(`cstudno`,`cfname`,`cmname`,`clname`,`cnickname`,`clocked`) values ('S0001','FRANCIS','PASINAG','DEL ROSARIO','LOUIE','0');
+
+/*Table structure for table `studparents` */
 
 DROP TABLE IF EXISTS `studparents`;
 
 CREATE TABLE `studparents` (
-  `cstudid` CHAR(5) NOT NULL,
-  `cparentlname` VARCHAR(100) NOT NULL,
-  `cparentfname` VARCHAR(100) NOT NULL,
-  `cparentmname` VARCHAR(100) NOT NULL,
-  `cparentbdate` DATE NOT NULL,
-  `coccupation` VARCHAR(100) NOT NULL,
-  `cgender` VARCHAR(10) NOT NULL,
-  `ccitizenship` VARCHAR(50) NOT NULL,
-  `cpermaddress` VARCHAR(200) NOT NULL,
-  `cpresaddress` VARCHAR(200) NOT NULL,
-  `creligion` VARCHAR(50) NOT NULL,
+  `cstudid` char(5) NOT NULL,
+  `cparentlname` varchar(100) NOT NULL,
+  `cparentfname` varchar(100) NOT NULL,
+  `cparentmname` varchar(100) NOT NULL,
+  `cparentbdate` date NOT NULL,
+  `coccupation` varchar(100) NOT NULL,
+  `cgender` varchar(10) NOT NULL,
+  `ccitizenship` varchar(50) NOT NULL,
+  `cpermaddress` varchar(200) NOT NULL,
+  `cpresaddress` varchar(200) NOT NULL,
+  `creligion` varchar(50) NOT NULL,
   KEY `cstudid` (`cstudid`),
   CONSTRAINT `studparents_ibfk_1` FOREIGN KEY (`cstudid`) REFERENCES `studinfo` (`cstudno`)
-) ENGINE=INNODB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `studparents` */
 
@@ -54,27 +61,33 @@ CREATE TABLE `studparents` (
 DROP TABLE IF EXISTS `studpersonalinfo`;
 
 CREATE TABLE `studpersonalinfo` (
-  `cstudid` CHAR(5) NOT NULL,
-  `cbirthdate` DATE NOT NULL,
-  `cbirthplace` VARCHAR(100) NOT NULL,
-  `cgender` VARCHAR(10) NOT NULL,
-  `ccitizenship` VARCHAR(50) NOT NULL,
-  `cheight` DECIMAL(5,2) NOT NULL,
-  `cweight` DECIMAL(5,2) NOT NULL,
-  `creligion` VARCHAR(50) NOT NULL,
+  `cstudid` char(5) NOT NULL,
+  `cbirthdate` date NOT NULL,
+  `cbirthplace` varchar(100) NOT NULL,
+  `cgender` varchar(10) NOT NULL,
+  `ccitizenship` varchar(50) NOT NULL,
+  `cheight` decimal(5,2) NOT NULL,
+  `cweight` decimal(5,2) NOT NULL,
+  `creligion` varchar(50) NOT NULL,
   PRIMARY KEY (`cstudid`),
   CONSTRAINT `studpersonalinfo_ibfk_1` FOREIGN KEY (`cstudid`) REFERENCES `studinfo` (`cstudno`)
-) ENGINE=INNODB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+/*Data for the table `studpersonalinfo` */
+
+insert  into `studpersonalinfo`(`cstudid`,`cbirthdate`,`cbirthplace`,`cgender`,`ccitizenship`,`cheight`,`cweight`,`creligion`) values ('S0001','2017-02-15','NORAL','MALE','FIL','123.00','123.00','ALL');
+
+/*Table structure for table `teacherinfo` */
 
 DROP TABLE IF EXISTS `teacherinfo`;
 
 CREATE TABLE `teacherinfo` (
-  `cteachno` CHAR(5) NOT NULL,
-  `cteacherfname` VARCHAR(100) DEFAULT NULL,
-  `cteachermname` VARCHAR(100) DEFAULT NULL,
-  `cteacherlname` VARCHAR(100) DEFAULT NULL,
+  `cteachno` char(5) NOT NULL,
+  `cteacherfname` varchar(100) DEFAULT NULL,
+  `cteachermname` varchar(100) DEFAULT NULL,
+  `cteacherlname` varchar(100) DEFAULT NULL,
   PRIMARY KEY (`cteachno`)
-) ENGINE=INNODB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `teacherinfo` */
 
@@ -83,17 +96,17 @@ CREATE TABLE `teacherinfo` (
 DROP TABLE IF EXISTS `teacherpersonalinfo`;
 
 CREATE TABLE `teacherpersonalinfo` (
-  `cteachID` CHAR(5) NOT NULL,
-  `cbirthdate` DATE DEFAULT NULL,
-  `cbirthplacecode` CHAR(6) DEFAULT NULL,
-  `cbirthplace2` VARCHAR(100) DEFAULT NULL,
-  `cgender` CHAR(1) DEFAULT NULL,
-  `ccitizenship` CHAR(3) DEFAULT NULL,
-  `cheight` DECIMAL(5,2) DEFAULT NULL,
-  `cweight` DECIMAL(5,2) DEFAULT NULL,
-  `creligion` CHAR(3) DEFAULT NULL,
+  `cteachID` char(5) NOT NULL,
+  `cbirthdate` date DEFAULT NULL,
+  `cbirthplacecode` char(6) DEFAULT NULL,
+  `cbirthplace2` varchar(100) DEFAULT NULL,
+  `cgender` char(1) DEFAULT NULL,
+  `ccitizenship` char(3) DEFAULT NULL,
+  `cheight` decimal(5,2) DEFAULT NULL,
+  `cweight` decimal(5,2) DEFAULT NULL,
+  `creligion` char(3) DEFAULT NULL,
   PRIMARY KEY (`cteachID`)
-) ENGINE=INNODB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `teacherpersonalinfo` */
 
@@ -102,9 +115,9 @@ CREATE TABLE `teacherpersonalinfo` (
 DROP TABLE IF EXISTS `teacherskills`;
 
 CREATE TABLE `teacherskills` (
-  `cteacherid` CHAR(5) DEFAULT NULL,
-  `cskills` VARCHAR(100) DEFAULT NULL
-) ENGINE=INNODB DEFAULT CHARSET=latin1;
+  `cteacherid` char(5) DEFAULT NULL,
+  `cskills` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `teacherskills` */
 
@@ -113,9 +126,9 @@ CREATE TABLE `teacherskills` (
 DROP TABLE IF EXISTS `teacherskillslist`;
 
 CREATE TABLE `teacherskillslist` (
-  `cskillcode` CHAR(6) DEFAULT NULL,
-  `cskilldesc` VARCHAR(100) DEFAULT NULL
-) ENGINE=INNODB DEFAULT CHARSET=latin1;
+  `cskillcode` char(6) DEFAULT NULL,
+  `cskilldesc` varchar(100) DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `teacherskillslist` */
 
@@ -124,13 +137,14 @@ CREATE TABLE `teacherskillslist` (
 DROP TABLE IF EXISTS `user`;
 
 CREATE TABLE `user` (
-  `username` CHAR(50) NOT NULL,
-  `password` CHAR(50) NOT NULL,
+  `username` char(50) NOT NULL,
+  `password` char(50) NOT NULL,
   PRIMARY KEY (`username`)
-) ENGINE=INNODB DEFAULT CHARSET=latin1;
+) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 /*Data for the table `user` */
 
+insert  into `user`(`username`,`password`) values ('admin','admin');
 
 /*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
 /*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
