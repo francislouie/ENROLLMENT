@@ -6,7 +6,6 @@
         createcolumnstudinfo()
 
         gridstudinfo()
-
         querydatagrid()
 
         createcombostudinfo()
